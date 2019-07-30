@@ -1,1 +1,21 @@
 <!-- Put the HTML template for your page here! -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flask</title>
+	<h1 style="color:blue;">Ice Cream</h1>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<p> I don't think I have to explain why Ice cream is the best. It's cold sweet and tasty what can go wrong?</p>
+	{% if day==False %}
+		<p> Fish </p>
+	{% endif %}
+	<ol>
+		{% for f in foods%}
+		<li>{{f}}</li>
+		{%endfor%}
+	</ol>
+
+</body>
+</html>
